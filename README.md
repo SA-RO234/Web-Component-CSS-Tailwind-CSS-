@@ -25,8 +25,5 @@ A simple login form styled with TailwindCSS.
 
 ## Note : When clone each of component please install dependency by this command :
 ```bash 
-  install  :  npm install
-```bash
-   run     :  npm run dev
-```bash
-   git clone https://github.com/SA-RO234/Web-Component-CSS-Tailwind-CSS-.git
+    npm install
+    npm run dev
