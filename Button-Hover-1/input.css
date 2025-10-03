@@ -1,0 +1,45 @@
+@import "tailwindcss";
+body{
+      background-color: #000;
+}
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #fd1853;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  border: none;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background:green;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+/* button:hover{
+   background-color:transparent;
+} */
+
+
+
+
+
+
+
+
+
+
