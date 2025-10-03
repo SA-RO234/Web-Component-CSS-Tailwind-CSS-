@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web || Component</title>
+    <!-- Style -->
     <link rel="stylesheet" href="output.css">
+      <!-- google font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Luckiest+Guy&family=Moul&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Preahvihear&family=Righteous&family=Rubik:ital,wght@0,300..900;1,300..900&family=Siemreap&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=TASA+Explorer:wght@400..800&family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="w-[65%] mx-auto text-center mt-20">
-       <h1 class="text-2xl font-bold pb-10 text-white">Button  |  TailwindCSS</h1>
-       <button type="button">BUTTON</button>
+    <div class="w-[65%] flex justify-center flex-col items-center mx-auto text-center mt-20">
+       <h1 class="text-5xl  font-bold pb-10 text-white">Button (Slide-out & Slide-In) | TailwindCSS</h1>
+       <button class="btn" type="button">Find in Stores</button>
     </div>
+
+    <script>
+  const btn = document.querySelector("button");
+  btn.addEventListener("mouseenter", () => {
+    btn.classList.add("has-hovered");
+  });
+</script>
+
 </body>
 </html>

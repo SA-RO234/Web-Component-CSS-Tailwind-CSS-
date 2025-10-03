@@ -1,45 +1,65 @@
 @import "tailwindcss";
-body{
-      background-color: #000;
+
+body {
+   font-family: "Lexend", sans-serif;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://res.cloudinary.com/dnfahcxo3/image/upload/v1754101870/vmovf0djhmwyakpqapoe.jpg');
 }
+
 button {
   position: relative;
   display: flex;
+  font-size: 2em;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: #fd1853;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
-  border: none;
+  padding: 50px 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  z-index: 1;
+  border: 2px solid #fff;
+  background: transparent;
 }
 
-button:after {
-  content: " ";
-  width: 0%;
-  height: 100%;
-  background:green;
+/* Default state (no animation, already filled) */
+
+button::after {
+  content: "";
   position: absolute;
-  transition: all 0.4s ease-in-out;
-  right: 0;
-}
-
-button:hover::after {
-  right: auto;
+  top: 0;
   left: 0;
-  width: 100%;
+  height: 100%;
+  width: 100%;          /* start filled */
+  background: #fff;  
+  z-index: -1;
 }
-/* button:hover{
-   background-color:transparent;
-} */
 
+button:hover{
+  color: #fff;
+}
+/* Hover → slide out */
+button:hover::after {
+  animation: slideOut 0.6s forwards;
+  animation-timing-function: ease-in-out;
+}
 
+/* ✅ Only animate slide-in AFTER hover has happened */
+button.has-hovered:not(:hover)::after {
+  animation: slideIn 0.6s forwards;
+  animation-timing-function: ease-in-out;
+}
 
+/* Keyframes */
+@keyframes slideOut {
+  0% { width: 100%; left: 0; }
+  100% { width: 0%; left: 100%; }
+}
 
-
-
-
-
-
-
+@keyframes slideIn {
+  0% { width: 0%; left: 0; }
+  100% { width: 100%; left: 0; }
+}

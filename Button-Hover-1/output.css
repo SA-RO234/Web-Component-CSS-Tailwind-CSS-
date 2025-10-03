@@ -9,8 +9,8 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -171,8 +171,20 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .flex {
+    display: flex;
+  }
   .w-\[65\%\] {
     width: 65%;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -180,9 +192,9 @@
   .text-center {
     text-align: center;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -193,33 +205,68 @@
   }
 }
 body {
-  background-color: #000;
+  font-family: "Lexend", sans-serif;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://res.cloudinary.com/dnfahcxo3/image/upload/v1754101870/vmovf0djhmwyakpqapoe.jpg');
 }
 button {
   position: relative;
   display: flex;
+  font-size: 2em;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: #fd1853;
-  font-family: "Montserrat", sans-serif;
-  overflow: hidden;
-  border: none;
+  padding: 50px 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  z-index: 1;
+  border: 2px solid #fff;
+  background: transparent;
 }
-button:after {
-  content: " ";
-  width: 0%;
-  height: 100%;
-  background: green;
+button::after {
+  content: "";
   position: absolute;
-  transition: all 0.4s ease-in-out;
-  right: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: -1;
+}
+button:hover {
+  color: #fff;
 }
 button:hover::after {
-  right: auto;
-  left: 0;
-  width: 100%;
+  animation: slideOut 0.6s forwards;
+  animation-timing-function: ease-in-out;
+}
+button.has-hovered:not(:hover)::after {
+  animation: slideIn 0.6s forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideOut {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+@keyframes slideIn {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
 }
 @property --tw-font-weight {
   syntax: "*";

@@ -7,10 +7,10 @@ Each folder represents a different component or example.
 
 ## 🚀 Components
 
-### 🔘 Button Hover Effect
-A collection of modern hover effects for buttons.  
+### 🔘 Button Hover Effect (Slide-out && Slide-in)
+A modern hover effects for buttons.  
 
-![Button Hover Demo](./Button-Hover-1/screenshot.png)
+![live preview](https://res.cloudinary.com/dnfahcxo3/image/upload/v1759471771/Screencastfrom2025-10-0313-06-05-ezgif.com-video-to-gif-converter_xjzbqx.gif)
 
 ---
 
@@ -22,3 +22,11 @@ A simple login form styled with TailwindCSS.
 ![Laptop](https://res.cloudinary.com/dnfahcxo3/image/upload/v1759464777/Screenshot_from_2025-10-03_10-47-50_j92ixs.png)
 
 ---
+
+## Note : When clone each of component please install dependency by this command :
+```bash
+  install :  npm install
+  run     :  npm run dev
+
+```bash
+   git clone https://github.com/SA-RO234/Web-Component-CSS-Tailwind-CSS-.git
