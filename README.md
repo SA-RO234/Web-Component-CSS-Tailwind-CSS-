@@ -7,14 +7,14 @@ Each folder represents a different component or example.
 
 ## 🚀 Components
 
-### 🔘 Button Hover Effect (Slide-out && Slide-in)
+### 1. Button Hover Effect (Slide-out && Slide-in)
 A modern hover effects for buttons.  
 
 ![live preview](https://res.cloudinary.com/dnfahcxo3/image/upload/v1759471771/Screencastfrom2025-10-0313-06-05-ezgif.com-video-to-gif-converter_xjzbqx.gif)
 
 ---
 
-### 🔐 Login Form
+### 2. 🔐 Login Form
 A simple login form styled with TailwindCSS.  
 
 ![Tablet](https://res.cloudinary.com/dnfahcxo3/image/upload/v1759464777/Screenshot_from_2025-10-03_10-48-02_tbq3dk.png)
