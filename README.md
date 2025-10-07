@@ -23,6 +23,13 @@ A simple login form styled with TailwindCSS.
 
 ---
 
+### 3. Random Color 
+A modern tool can use for random Color and save color.
+
+![live preview](https://res.cloudinary.com/dnfahcxo3/image/upload/v1759801614/61b5d3de-3731-4df3-8129-1fa4914d4ea5.png)
+
+---
+
 ## Note : When clone each of component please install dependency by this command :
 ```bash 
     npm install
