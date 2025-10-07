@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+*{
+    font-family: "Lexend", sans-serif;
+}
+
+.show{
+    display: block !important;
+}
+.btnRandomColor::after {
+  content: "";
+  position: absolute;
+  /* inset: 0;  */
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: -1; 
+  transition: all 0.3s ease;
+}
+
+.btnRandomColor:hover{
+    border: 2px solid #000000;
+    color: #000000;
+}
+.btnRandomColor:hover::after {
+  height: 0;
+  width: 0;
+}
+
+
+.openboxHistory{
+     top: 30px ;
+    rotate: 0deg;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random | Color</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/src/css/output.css">
+    <!-- Google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Luckiest+Guy&family=Moul&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Preahvihear&family=Righteous&family=Rubik:ital,wght@0,300..900;1,300..900&family=Siemreap&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=TASA+Explorer:wght@400..800&family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+     <!--  Font Awsome ICON -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body id="boxColor" class="flex duration-300 h-screen justify-center items-center">
+   <button id="menu" class="absolute  right-10 top-10 font-bold text-5xl cursor-pointer" type="button"><i class="fa-solid fa-bars"></i></button>
+    <div id="ColorhistoryContainer" class="Color-container p-5 rounded-2xl   rotate-45 duration-400 bg-white z-3 absolute top-[-1500px] w-[86%]  py-5">
+        <h1 class="text-black  text-5xl font-bold text-center pt-2 pb-8">History [Color] Can Click for Copy!</h1>
+           <div id="Color-history" class="flex gap-5 flex-wrap justify-start items-start w-full ">
+
+        </div>
+      <!--  All Color History -->
+    </div>
+   <div class="w-[30%] bg-transparent border-2 border-black flex gap-10 justify-center items-center flex-col flex-wrap h-[400px]">
+      <button id="btnRandomColor"
+             class="btnRandomColor relative border-2 border-black hover:scale-110 active:scale-105 duration-300 flex justify-center items-center text-2xl cursor-pointer font-bold text-white rounded-2xl w-[55%] h-[70px] overflow-hidden"
+              type="button">Generate Color
+            </button>
+      <div  class="copy-color relative border-b-2 flex justify-between gap-5 w-[55%] bg-transparent items-center  text-black pt-5 pr-3">
+        <h2 id="textColor" class="text-black bg-white/30 h-full w-[85%] py-1 px-5 text-2xl  font-medium uppercase">#ffffff</h2>
+          <button id="copyColor" type="button" class="bg-black active:scale-105 duration-300 absolute bottom-0 right-0 text-white cursor-pointer rounded-md text-2xl px-1 py-1 " ><i class="fa-regular fa-clipboard"></i></button>
+      </div>
+    </div>
+    <!--  Alert -->
+      <div id="alert" class="mt-2 z-3 hidden absolute right-10 top-10 bg-green-700 border border-green-900 text-sm text-white rounded-lg p-4 ">
+        <span id="hs-soft-color-success-label" class="font-bold">Success</span> alert! You haved Copy !.
+     </div>
+</body>
+<!--  Java Script -->
+   <script type="module" src="/src/js/main.js"></script>
+   <script src="/src/js/menu.js"></script>
+</html>
